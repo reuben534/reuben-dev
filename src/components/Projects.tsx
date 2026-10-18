@@ -20,31 +20,31 @@ export const Projects: React.FC<ProjectsProps> = ({ onRequestCodeSample }) => {
   };
 
   return (
-    <section id="projects" className="py-20 md:py-28 relative bg-stone-100/40 dark:bg-[#0e0c0a]/60 border-t border-stone-200/80 dark:border-stone-800/60">
+    <section id="projects" className="py-12 md:py-16 relative bg-stone-100/40 dark:bg-[#0e0c0a]/60 border-t border-stone-200/80 dark:border-stone-800/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl">
-          <div className="text-xs font-mono uppercase tracking-wider text-amber-700 dark:text-amber-400 font-semibold mb-2">
+          <div className="text-xs font-mono uppercase tracking-wider text-amber-700 dark:text-amber-400 font-semibold mb-1">
             Selected Works & Engineering
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-900 dark:text-stone-100 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 dark:text-stone-100 tracking-tight">
             Featured Projects
           </h2>
-          <p className="mt-3 text-base text-stone-600 dark:text-stone-300">
-            A collection of selected projects demonstrating my skills in web development, software engineering, and application development.
+          <p className="mt-1.5 text-sm text-stone-600 dark:text-stone-300">
+            Selected applications demonstrating real-world software engineering, responsive UI, and robust backends.
           </p>
         </div>
 
         {/* Featured Projects Grid */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
           {PROJECTS.map((project) => (
             <div
               key={project.id}
-              className="rounded-2xl bg-white/90 dark:bg-stone-900/70 border border-stone-200/90 dark:border-stone-800/80 hover:border-amber-500/50 dark:hover:border-amber-900/50 overflow-hidden flex flex-col justify-between group transition-all shadow-sm hover:shadow-xl hover:shadow-stone-900/5 dark:hover:shadow-amber-950/20"
+              className="rounded-2xl bg-white/90 dark:bg-stone-900/70 border border-stone-200/90 dark:border-stone-800/80 hover:border-amber-500/50 dark:hover:border-amber-900/50 overflow-hidden flex flex-col justify-between group transition-all shadow-sm hover:shadow-lg hover:shadow-stone-900/5 dark:hover:shadow-amber-950/20"
             >
               <div>
                 {/* Project Image Frame */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-stone-100 dark:bg-stone-950 border-b border-stone-200 dark:border-stone-800/80">
+                <div className="relative aspect-[16/9] overflow-hidden bg-stone-100 dark:bg-stone-950 border-b border-stone-200 dark:border-stone-800/80">
                   <img
                     src={project.image}
                     alt={project.title}

@@ -46,19 +46,19 @@ export const Services: React.FC<ServicesProps> = ({ onSelectServiceForInquiry })
   };
 
   return (
-    <section id="services" className="py-20 md:py-28 relative bg-stone-100/50 dark:bg-[#0e0c0a]/60 border-y border-stone-200/80 dark:border-stone-800/60">
+    <section id="services" className="py-12 md:py-16 relative bg-stone-100/50 dark:bg-[#0e0c0a]/60 border-y border-stone-200/80 dark:border-stone-800/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div className="max-w-2xl">
-            <div className="text-xs font-mono uppercase tracking-wider text-amber-700 dark:text-amber-400 font-semibold mb-2">
+            <div className="text-xs font-mono uppercase tracking-wider text-amber-700 dark:text-amber-400 font-semibold mb-1">
               Capabilities & Offerings
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-900 dark:text-stone-100 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 dark:text-stone-100 tracking-tight">
               How I Can Help You
             </h2>
-            <p className="mt-3 text-base text-stone-600 dark:text-stone-300">
-              End-to-end digital solutions tailored for companies, founders, and startups looking to launch reliable, secure products.
+            <p className="mt-1.5 text-sm text-stone-600 dark:text-stone-300">
+              End-to-end digital solutions tailored for companies, founders, and startups looking to launch reliable products.
             </p>
           </div>
           <div className="text-xs text-stone-500 dark:text-stone-400 flex items-center gap-2">
@@ -68,15 +68,15 @@ export const Services: React.FC<ServicesProps> = ({ onSelectServiceForInquiry })
         </div>
 
         {/* 8 Services Grid */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {SERVICES.map((service) => (
             <div
               key={service.id}
-              className="p-6 rounded-2xl bg-white/90 dark:bg-stone-900/70 border border-stone-200/90 dark:border-stone-800/80 hover:border-amber-500/50 dark:hover:border-amber-500/40 transition-all flex flex-col justify-between group shadow-sm hover:shadow-xl hover:shadow-stone-900/5 dark:hover:shadow-amber-950/20"
+              className="p-4 sm:p-5 rounded-2xl bg-white/90 dark:bg-stone-900/70 border border-stone-200/90 dark:border-stone-800/80 hover:border-amber-500/50 dark:hover:border-amber-500/40 transition-all flex flex-col justify-between group shadow-sm hover:shadow-lg hover:shadow-stone-900/5 dark:hover:shadow-amber-950/20"
             >
               <div>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="p-2.5 rounded-xl bg-amber-50 dark:bg-amber-950/50 border border-amber-200/80 dark:border-amber-900/30 group-hover:bg-amber-100 dark:group-hover:bg-amber-500/20 group-hover:border-amber-400 dark:group-hover:border-amber-500/40 transition-colors">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="p-2 rounded-xl bg-amber-50 dark:bg-amber-950/50 border border-amber-200/80 dark:border-amber-900/30 group-hover:bg-amber-100 dark:group-hover:bg-amber-500/20 group-hover:border-amber-400 dark:group-hover:border-amber-500/40 transition-colors">
                     {getIcon(service.iconName)}
                   </div>
                   <span className="text-xs font-mono text-stone-400 dark:text-stone-500 font-medium">
@@ -84,38 +84,45 @@ export const Services: React.FC<ServicesProps> = ({ onSelectServiceForInquiry })
                   </span>
                 </div>
 
-                <h3 className="text-lg font-bold text-stone-900 dark:text-stone-100 tracking-tight group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors">
+                <h3 className="text-base font-bold text-stone-900 dark:text-stone-100 tracking-tight group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors">
                   {service.title}
                 </h3>
-                <p className="mt-2 text-xs text-stone-600 dark:text-stone-300 leading-relaxed min-h-[3rem]">
+                <p className="mt-1.5 text-xs text-stone-600 dark:text-stone-300 leading-relaxed min-h-[2.5rem]">
                   {service.shortDesc}
                 </p>
 
                 {/* Tech Tags */}
-                <div className="mt-4 pt-4 border-t border-stone-100 dark:border-stone-800/80 flex flex-wrap gap-1.5">
+                <div className="mt-3 pt-3 border-t border-stone-100 dark:border-stone-800/80 flex flex-wrap gap-1">
                   {service.techStack.slice(0, 3).map((tech, i) => (
                     <span
                       key={i}
-                      className="text-[11px] font-mono text-stone-700 dark:text-stone-300 bg-stone-100 dark:bg-stone-800/70 px-2 py-0.5 rounded border border-stone-200/80 dark:border-stone-750"
+                      className="text-[10px] font-mono text-stone-700 dark:text-stone-300 bg-stone-100 dark:bg-stone-800/70 px-1.5 py-0.5 rounded border border-stone-200/80 dark:border-stone-750"
                     >
                       {tech}
                     </span>
                   ))}
                   {service.techStack.length > 3 && (
-                    <span className="text-[11px] font-mono text-amber-700 dark:text-amber-400 bg-amber-100/70 dark:bg-amber-950/40 px-1.5 py-0.5 rounded border border-amber-300/80 dark:border-amber-900/40">
+                    <span className="text-[10px] font-mono text-amber-700 dark:text-amber-400 bg-amber-100/70 dark:bg-amber-950/40 px-1 py-0.5 rounded border border-amber-300/80 dark:border-amber-900/40">
                       +{service.techStack.length - 3}
                     </span>
                   )}
                 </div>
               </div>
 
-              <div className="mt-6 pt-2">
+              <div className="mt-4 pt-2 flex items-center gap-2">
                 <button
                   onClick={() => setActiveModalService(service)}
-                  className="w-full flex items-center justify-between text-xs font-semibold text-stone-700 dark:text-stone-300 group-hover:text-amber-800 dark:group-hover:text-white py-2 px-3 rounded-lg bg-stone-50 dark:bg-stone-800/50 hover:bg-amber-50 dark:hover:bg-amber-500/15 hover:text-amber-800 dark:hover:text-amber-300 border border-stone-200/60 dark:border-transparent hover:border-amber-300 dark:hover:border-amber-500/30 transition-all"
+                  className="flex-1 flex items-center justify-center gap-1 text-[11px] font-semibold text-stone-700 dark:text-stone-300 group-hover:text-amber-800 dark:group-hover:text-white py-1.5 px-2 rounded-lg bg-stone-50 dark:bg-stone-800/50 hover:bg-amber-50 dark:hover:bg-amber-500/15 hover:text-amber-800 dark:hover:text-amber-300 border border-stone-200/60 dark:border-transparent transition-all"
                 >
-                  <span>Scope & Deliverables</span>
-                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform text-amber-600 dark:text-amber-400" />
+                  <span>Details</span>
+                  <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform text-amber-600 dark:text-amber-400" />
+                </button>
+                <button
+                  onClick={() => onSelectServiceForInquiry(service.title)}
+                  className="px-2.5 py-1.5 text-[11px] font-bold text-white bg-amber-600 hover:bg-amber-500 rounded-lg transition-colors shadow-xs"
+                  title="Inquire about this service"
+                >
+                  Inquire
                 </button>
               </div>
             </div>

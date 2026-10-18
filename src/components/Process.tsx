@@ -8,36 +8,36 @@ export const Process: React.FC = () => {
   const currentStepData = PROCESS_STEPS.find((s) => s.stepNumber === activeStep) || PROCESS_STEPS[0];
 
   return (
-    <section id="process" className="py-20 md:py-28 relative">
+    <section id="process" className="py-12 md:py-16 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl">
-          <div className="text-xs font-mono uppercase tracking-wider text-amber-700 dark:text-amber-400 font-semibold mb-2">
+          <div className="text-xs font-mono uppercase tracking-wider text-amber-700 dark:text-amber-400 font-semibold mb-1">
             Methodology & Milestones
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-900 dark:text-stone-100 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 dark:text-stone-100 tracking-tight">
             My Development Process
           </h2>
-          <p className="mt-3 text-base text-stone-600 dark:text-stone-300">
-            A structured, 6-stage lifecycle that minimizes risk, prevents scope creep, and ensures your application launches on schedule.
+          <p className="mt-1.5 text-sm text-stone-600 dark:text-stone-300">
+            A structured 6-stage lifecycle from initial scope to live cloud deployment.
           </p>
         </div>
 
         {/* Step Navigation Bar / Progress Tracker */}
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3">
+        <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-2.5">
           {PROCESS_STEPS.map((step) => {
             const isSelected = step.stepNumber === activeStep;
             return (
               <button
                 key={step.stepNumber}
                 onClick={() => setActiveStep(step.stepNumber)}
-                className={`p-3.5 sm:p-4 rounded-xl text-left transition-all border shadow-sm ${
+                className={`p-3 sm:p-3.5 rounded-xl text-left transition-all border shadow-sm ${
                   isSelected
                     ? 'bg-amber-100/80 dark:bg-amber-500/15 border-amber-500/80 shadow-md shadow-amber-900/10 dark:shadow-amber-950/30'
                     : 'bg-white/80 dark:bg-stone-900/60 border-stone-200/80 dark:border-stone-800 hover:border-amber-400 dark:hover:border-stone-700 hover:bg-white dark:hover:bg-stone-900'
                 }`}
               >
-                <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center justify-between mb-1.5">
                   <span
                     className={`text-xs font-mono font-bold ${
                       isSelected ? 'text-amber-800 dark:text-amber-400' : 'text-stone-500 dark:text-stone-400'
@@ -60,8 +60,8 @@ export const Process: React.FC = () => {
         </div>
 
         {/* Active Step Deep-Dive Card */}
-        <div className="mt-8 p-6 sm:p-8 rounded-2xl bg-white/95 dark:bg-stone-900/70 border border-stone-200/90 dark:border-stone-800/90 shadow-lg">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="mt-6 p-5 sm:p-6 rounded-2xl bg-white/95 dark:bg-stone-900/70 border border-stone-200/90 dark:border-stone-800/90 shadow-md">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
             <div className="lg:col-span-7 space-y-4">
               <div className="flex items-center gap-3">
                 <span className="text-xs font-mono text-amber-800 dark:text-amber-300 bg-amber-100 dark:bg-amber-950/80 px-2.5 py-1 rounded-md border border-amber-300 dark:border-amber-800/40 font-semibold">

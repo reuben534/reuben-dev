@@ -14,8 +14,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBrandModal }) => {
 
   return (
     <footer className="bg-stone-100/80 dark:bg-[#080706] border-t border-stone-200/90 dark:border-stone-800/80 text-stone-600 dark:text-stone-400 text-xs transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
           {/* Brand & Identity */}
           <div className="md:col-span-2 space-y-3">
             <div className="flex items-center gap-2.5 text-stone-900 dark:text-stone-100 font-bold text-base">

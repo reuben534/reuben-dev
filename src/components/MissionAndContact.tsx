@@ -90,31 +90,31 @@ ${projectDetails || 'No details provided yet'}`;
   ];
 
   return (
-    <section id="contact" className="py-20 md:py-28 relative bg-stone-100/50 dark:bg-[#0e0c0a]/70 border-t border-stone-200/80 dark:border-stone-800/80">
+    <section id="contact" className="py-12 md:py-16 relative bg-stone-100/50 dark:bg-[#0e0c0a]/70 border-t border-stone-200/80 dark:border-stone-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Mission Section Banner */}
-        <div className="mb-20 p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-amber-50/90 via-white to-amber-100/40 dark:from-stone-900/95 dark:via-[#181512] dark:to-stone-900/95 border border-amber-200/90 dark:border-amber-900/40 relative overflow-hidden shadow-md dark:shadow-2xl">
+        {/* Mission Section Banner (Short & Sweet) */}
+        <div className="mb-10 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-amber-50/90 via-white to-amber-100/40 dark:from-stone-900/95 dark:via-[#181512] dark:to-stone-900/95 border border-amber-200/90 dark:border-amber-900/40 relative overflow-hidden shadow-sm dark:shadow-xl">
           <div
-            className="pointer-events-none absolute -right-20 -bottom-20 w-96 h-96 bg-amber-500/10 dark:bg-amber-600/12 rounded-full blur-3xl -z-0"
+            className="pointer-events-none absolute -right-20 -bottom-20 w-80 h-80 bg-amber-500/10 dark:bg-amber-600/12 rounded-full blur-3xl -z-0"
             aria-hidden="true"
           />
 
-          <div className="relative z-10 max-w-4xl">
-            <div className="text-xs font-mono uppercase tracking-wider text-amber-700 dark:text-amber-400 font-semibold mb-3 flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+          <div className="relative z-10 max-w-3xl">
+            <div className="text-xs font-mono uppercase tracking-wider text-amber-700 dark:text-amber-400 font-semibold mb-1.5 flex items-center gap-1.5">
+              <Sparkles className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
               <span>Founder’s Commitment</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-stone-900 dark:text-stone-100 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 dark:text-stone-100 tracking-tight">
               My Mission
             </h2>
-            <p className="mt-4 text-base sm:text-lg text-stone-700 dark:text-stone-200 leading-relaxed [text-wrap:balance]">
-              {PERSONAL_INFO.mission}
+            <p className="mt-2.5 text-base sm:text-lg text-stone-700 dark:text-stone-200 leading-relaxed [text-wrap:balance]">
+              "{PERSONAL_INFO.mission}"
             </p>
 
-            <div className="mt-6 pt-6 border-t border-amber-200/70 dark:border-stone-800/80 flex flex-wrap items-center gap-6 text-xs text-stone-600 dark:text-stone-400">
+            <div className="mt-4 pt-4 border-t border-amber-200/70 dark:border-stone-800/80 flex flex-wrap items-center gap-4 text-xs text-stone-600 dark:text-stone-400 font-medium">
               <span className="font-semibold text-amber-800 dark:text-amber-300">Reuben</span>
               <span aria-hidden="true" className="text-stone-300 dark:text-stone-700">·</span>
-              <span>Founder & Full Stack Developer</span>
+              <span>Founder of {PERSONAL_INFO.brandName}</span>
               <span aria-hidden="true" className="text-stone-300 dark:text-stone-700">·</span>
               <span>South Africa</span>
             </div>
@@ -122,85 +122,88 @@ ${projectDetails || 'No details provided yet'}`;
         </div>
 
         {/* Let's Build Together / Contact Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left Column: Direct Info & Quick Actions */}
-          <div className="lg:col-span-5 space-y-6">
+          <div className="lg:col-span-5 space-y-4">
             <div>
-              <div className="text-xs font-mono uppercase tracking-wider text-amber-700 dark:text-amber-400 font-semibold mb-2">
+              <div className="text-xs font-mono uppercase tracking-wider text-amber-700 dark:text-amber-400 font-semibold mb-1">
                 Initiate Collaboration
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-900 dark:text-stone-100 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 dark:text-stone-100 tracking-tight">
                 Let’s Build Together
               </h2>
-              <p className="mt-3 text-sm text-stone-600 dark:text-stone-300 leading-relaxed">
-                Have a new project, business web app, enterprise portal, or want to take an idea to cloud deployment? Share your requirements and let's craft a solution that drives measurable results.
+              <p className="mt-1.5 text-sm text-stone-600 dark:text-stone-300 leading-relaxed">
+                Have a project or digital product idea? Connect directly via email or message, or outline your requirements in the quick planner.
               </p>
             </div>
 
             {/* Direct Email Card */}
-            <div className="p-5 rounded-xl bg-white/90 dark:bg-stone-900/80 border border-stone-200/90 dark:border-stone-800 space-y-3 shadow-sm">
+            <div className="p-4 rounded-xl bg-white/90 dark:bg-stone-900/80 border border-stone-200/90 dark:border-stone-800 space-y-2.5 shadow-sm">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-500 dark:text-stone-400">
-                  Direct Inquiries
+                  Direct Email
                 </span>
-                <span className="text-[11px] font-mono text-emerald-700 dark:text-amber-400 font-semibold">
-                  Average Response: &lt; 24h
+                <span className="text-[10px] font-mono text-emerald-700 dark:text-amber-400 font-semibold">
+                  Reply: &lt; 24h
                 </span>
               </div>
-              <div className="flex items-center justify-between p-3 rounded-lg bg-stone-50 dark:bg-stone-950/70 border border-stone-200 dark:border-stone-800/80">
-                <div className="flex items-center gap-2.5">
+              <div className="flex items-center justify-between p-2.5 rounded-lg bg-stone-50 dark:bg-stone-950/70 border border-stone-200 dark:border-stone-800/80">
+                <div className="flex items-center gap-2">
                   <Mail className="w-4 h-4 text-amber-600 dark:text-amber-400" />
-                  <span className="text-xs sm:text-sm font-mono text-stone-900 dark:text-stone-100 select-all font-medium">
+                  <a
+                    href={`mailto:${PERSONAL_INFO.email}`}
+                    className="text-xs sm:text-sm font-mono text-stone-900 dark:text-stone-100 hover:underline font-medium"
+                  >
                     {PERSONAL_INFO.email}
-                  </span>
+                  </a>
                 </div>
                 <button
                   onClick={handleCopyEmail}
-                  className="px-2.5 py-1 text-xs font-medium text-stone-700 hover:text-stone-950 bg-stone-200/70 hover:bg-stone-200 dark:text-stone-300 dark:hover:text-white dark:bg-stone-800 dark:hover:bg-stone-700 rounded transition-colors flex items-center gap-1.5 shadow-sm"
+                  className="px-2 py-1 text-xs font-medium text-stone-700 hover:text-stone-950 bg-stone-200/70 hover:bg-stone-200 dark:text-stone-300 dark:hover:text-white dark:bg-stone-800 dark:hover:bg-stone-700 rounded transition-colors flex items-center gap-1 shadow-xs"
                   title="Copy email address"
                 >
                   {copiedEmail ? (
                     <>
-                      <Check className="w-3.5 h-3.5 text-emerald-600 dark:text-amber-400" />
-                      <span className="text-emerald-700 dark:text-amber-400 font-semibold">Copied</span>
+                      <Check className="w-3 h-3 text-emerald-600 dark:text-amber-400" />
+                      <span className="text-emerald-700 dark:text-amber-400 font-semibold text-[11px]">Copied</span>
                     </>
                   ) : (
                     <>
-                      <Copy className="w-3.5 h-3.5" />
-                      <span>Copy</span>
+                      <Copy className="w-3 h-3" />
+                      <span className="text-[11px]">Copy</span>
                     </>
                   )}
                 </button>
               </div>
             </div>
 
-            {/* Location & Timezone Details */}
-            <div className="p-5 rounded-xl bg-white/70 dark:bg-stone-900/50 border border-stone-200/80 dark:border-stone-800 space-y-3 text-xs text-stone-600 dark:text-stone-300 shadow-sm">
-              <div className="flex items-center gap-2.5">
-                <MapPin className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
-                <span>Based in South Africa (GMT+2 / SAST) — Working with global clients.</span>
+            {/* Location & NDA Details */}
+            <div className="p-3.5 rounded-xl bg-white/70 dark:bg-stone-900/50 border border-stone-200/80 dark:border-stone-800 space-y-2 text-xs text-stone-600 dark:text-stone-300 shadow-sm">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 shrink-0" />
+                <span>Based in South Africa (GMT+2) · Available globally</span>
               </div>
-              <div className="flex items-center gap-2.5">
-                <ShieldCheck className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
-                <span>NDA & Confidentiality Agreements available before scope sharing.</span>
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 shrink-0" />
+                <span>Mutual NDA available prior to technical scoping</span>
               </div>
             </div>
           </div>
 
           {/* Right Column: Interactive Project Scope Planner Form */}
           <div className="lg:col-span-7">
-            <div className="p-6 sm:p-8 rounded-2xl bg-white/95 dark:bg-stone-900/80 border border-stone-200/90 dark:border-stone-800 shadow-lg">
-              <div className="flex items-center justify-between pb-4 border-b border-stone-100 dark:border-stone-800 mb-6">
+            <div className="p-5 sm:p-6 rounded-2xl bg-white/95 dark:bg-stone-900/80 border border-stone-200/90 dark:border-stone-800 shadow-md">
+              <div className="flex items-center justify-between pb-3 border-b border-stone-100 dark:border-stone-800 mb-4">
                 <div>
-                  <h3 className="text-lg font-bold text-stone-900 dark:text-stone-100">Project Scope & Inquiry Planner</h3>
+                  <h3 className="text-base font-bold text-stone-900 dark:text-stone-100">Project Scope & Inquiry Planner</h3>
                   <p className="text-xs text-stone-500 dark:text-stone-400">
-                    Specify your project parameters for an accurate estimate and architectural plan.
+                    Specify your project parameters for an immediate estimate and architecture plan.
                   </p>
                 </div>
               </div>
 
               {isSubmitted && (
-                <div className="mb-6 p-4 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-800/80 text-xs text-amber-800 dark:text-amber-200 flex items-center justify-between">
+                <div className="mb-4 p-3 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-800/80 text-xs text-amber-800 dark:text-amber-200 flex items-center justify-between">
                   <span>
                     Inquiry generated! Your email client has been launched with the pre-filled brief.
                   </span>
@@ -213,16 +216,16 @@ ${projectDetails || 'No details provided yet'}`;
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-3.5">
                 {/* Service Selection */}
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-2">
+                  <label className="block text-[11px] font-semibold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-1">
                     Service Required
                   </label>
                   <select
                     value={selectedService}
                     onChange={(e) => setSelectedService(e.target.value)}
-                    className="w-full px-3.5 py-2.5 text-xs text-stone-900 dark:text-white bg-stone-50 dark:bg-stone-950 border border-stone-300/80 dark:border-stone-800 rounded-lg focus:outline-none focus:border-amber-500 transition-colors"
+                    className="w-full px-3 py-2 text-xs text-stone-900 dark:text-white bg-stone-50 dark:bg-stone-950 border border-stone-300/80 dark:border-stone-800 rounded-lg focus:outline-none focus:border-amber-500 transition-colors"
                   >
                     {SERVICES.map((s) => (
                       <option key={s.id} value={s.title}>
@@ -239,9 +242,9 @@ ${projectDetails || 'No details provided yet'}`;
                 </div>
 
                 {/* Name & Email inputs */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-2">
+                    <label className="block text-[11px] font-semibold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-1">
                       Your Name *
                     </label>
                     <input
@@ -250,11 +253,11 @@ ${projectDetails || 'No details provided yet'}`;
                       placeholder="Jane Doe"
                       value={clientName}
                       onChange={(e) => setClientName(e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-xs text-stone-900 dark:text-white bg-stone-50 dark:bg-stone-950 border border-stone-300/80 dark:border-stone-800 rounded-lg focus:outline-none focus:border-amber-500 transition-colors placeholder:text-stone-400"
+                      className="w-full px-3 py-2 text-xs text-stone-900 dark:text-white bg-stone-50 dark:bg-stone-950 border border-stone-300/80 dark:border-stone-800 rounded-lg focus:outline-none focus:border-amber-500 transition-colors placeholder:text-stone-400"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-2">
+                    <label className="block text-[11px] font-semibold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-1">
                       Email Address *
                     </label>
                     <input
@@ -263,15 +266,15 @@ ${projectDetails || 'No details provided yet'}`;
                       placeholder="jane@company.com"
                       value={clientEmail}
                       onChange={(e) => setClientEmail(e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-xs text-stone-900 dark:text-white bg-stone-50 dark:bg-stone-950 border border-stone-300/80 dark:border-stone-800 rounded-lg focus:outline-none focus:border-amber-500 transition-colors placeholder:text-stone-400"
+                      className="w-full px-3 py-2 text-xs text-stone-900 dark:text-white bg-stone-50 dark:bg-stone-950 border border-stone-300/80 dark:border-stone-800 rounded-lg focus:outline-none focus:border-amber-500 transition-colors placeholder:text-stone-400"
                     />
                   </div>
                 </div>
 
                 {/* Company & Timeline */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-2">
+                    <label className="block text-[11px] font-semibold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-1">
                       Company / Organization (Optional)
                     </label>
                     <input
@@ -279,17 +282,17 @@ ${projectDetails || 'No details provided yet'}`;
                       placeholder="Acme Enterprises"
                       value={clientCompany}
                       onChange={(e) => setClientCompany(e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-xs text-stone-900 dark:text-white bg-stone-50 dark:bg-stone-950 border border-stone-300/80 dark:border-stone-800 rounded-lg focus:outline-none focus:border-amber-500 transition-colors placeholder:text-stone-400"
+                      className="w-full px-3 py-2 text-xs text-stone-900 dark:text-white bg-stone-50 dark:bg-stone-950 border border-stone-300/80 dark:border-stone-800 rounded-lg focus:outline-none focus:border-amber-500 transition-colors placeholder:text-stone-400"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-2">
+                    <label className="block text-[11px] font-semibold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-1">
                       Target Timeline
                     </label>
                     <select
                       value={timeline}
                       onChange={(e) => setTimeline(e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-xs text-stone-900 dark:text-white bg-stone-50 dark:bg-stone-950 border border-stone-300/80 dark:border-stone-800 rounded-lg focus:outline-none focus:border-amber-500 transition-colors"
+                      className="w-full px-3 py-2 text-xs text-stone-900 dark:text-white bg-stone-50 dark:bg-stone-950 border border-stone-300/80 dark:border-stone-800 rounded-lg focus:outline-none focus:border-amber-500 transition-colors"
                     >
                       {timelineOptions.map((opt) => (
                         <option key={opt} value={opt}>
@@ -302,24 +305,24 @@ ${projectDetails || 'No details provided yet'}`;
 
                 {/* Project Details */}
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-2">
-                    Project Goals, Features, or Specifications *
+                  <label className="block text-[11px] font-semibold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-1">
+                    Project Scope & Objectives *
                   </label>
                   <textarea
                     required
-                    rows={4}
-                    placeholder="Briefly describe what you would like to build, any preferred tech stack (e.g. ASP.NET Core, MERN Stack, React, SQL Server/MongoDB), and target outcomes..."
+                    rows={3}
+                    placeholder="Briefly describe what you would like to build, preferred tech stack, and goals..."
                     value={projectDetails}
                     onChange={(e) => setProjectDetails(e.target.value)}
-                    className="w-full px-3.5 py-2.5 text-xs text-stone-900 dark:text-white bg-stone-50 dark:bg-stone-950 border border-stone-300/80 dark:border-stone-800 rounded-lg focus:outline-none focus:border-amber-500 transition-colors placeholder:text-stone-400 resize-none"
+                    className="w-full px-3 py-2 text-xs text-stone-900 dark:text-white bg-stone-50 dark:bg-stone-950 border border-stone-300/80 dark:border-stone-800 rounded-lg focus:outline-none focus:border-amber-500 transition-colors placeholder:text-stone-400 resize-none"
                   />
                 </div>
 
                 {/* Form Buttons */}
-                <div className="pt-2 flex flex-col sm:flex-row items-center gap-3">
+                <div className="pt-1.5 flex flex-col sm:flex-row items-center gap-2.5">
                   <button
                     type="submit"
-                    className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 py-3 px-5 text-xs font-bold text-white bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 rounded-lg transition-colors shadow-md shadow-amber-900/20 active:translate-y-0.5"
+                    className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 text-xs font-bold text-white bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 rounded-lg transition-colors shadow-md shadow-amber-900/20 active:translate-y-0.5"
                   >
                     <Send className="w-3.5 h-3.5" />
                     <span>Send Project Inquiry</span>
@@ -328,7 +331,7 @@ ${projectDetails || 'No details provided yet'}`;
                   <button
                     type="button"
                     onClick={handleCopyBrief}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3 px-4 text-xs font-semibold text-stone-700 dark:text-stone-300 hover:text-stone-950 dark:hover:text-white bg-stone-100 hover:bg-stone-200/80 dark:bg-stone-800 dark:hover:bg-stone-700 border border-stone-300/80 dark:border-stone-700 rounded-lg transition-colors shadow-sm"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-2.5 px-3.5 text-xs font-semibold text-stone-700 dark:text-stone-300 hover:text-stone-950 dark:hover:text-white bg-stone-100 hover:bg-stone-200/80 dark:bg-stone-800 dark:hover:bg-stone-700 border border-stone-300/80 dark:border-stone-700 rounded-lg transition-colors shadow-xs"
                   >
                     {copiedBrief ? (
                       <>

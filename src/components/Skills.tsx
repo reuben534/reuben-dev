@@ -27,19 +27,19 @@ export const Skills: React.FC = () => {
       : SKILL_CATEGORIES.filter((c) => c.category === selectedFilter);
 
   return (
-    <section id="skills" className="py-20 md:py-28 relative bg-stone-100/50 dark:bg-[#0e0c0a]/50 border-t border-stone-200/80 dark:border-stone-800/60">
+    <section id="skills" className="py-12 md:py-16 relative bg-stone-100/50 dark:bg-[#0e0c0a]/50 border-t border-stone-200/80 dark:border-stone-800/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div className="max-w-2xl">
-            <div className="text-xs font-mono uppercase tracking-wider text-amber-700 dark:text-amber-400 font-semibold mb-2">
+            <div className="text-xs font-mono uppercase tracking-wider text-amber-700 dark:text-amber-400 font-semibold mb-1">
               Technical Arsenal & Expertise
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-900 dark:text-stone-100 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 dark:text-stone-100 tracking-tight">
               Skills & Engineering Stack
             </h2>
-            <p className="mt-3 text-base text-stone-600 dark:text-stone-300">
-              A comprehensive toolkit developed through enterprise applications, formal academic rigor, and real-world system delivery.
+            <p className="mt-1.5 text-sm text-stone-600 dark:text-stone-300">
+              Modern full-stack technologies grounded in computer science principles and active commercial delivery.
             </p>
           </div>
 
@@ -53,7 +53,7 @@ export const Skills: React.FC = () => {
                   : 'text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100'
               }`}
             >
-              All Disciplines
+              All
             </button>
             {SKILL_CATEGORIES.map((cat) => (
               <button
@@ -72,11 +72,11 @@ export const Skills: React.FC = () => {
         </div>
 
         {/* Categories Grid */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
           {filteredCategories.map((category) => (
             <div
               key={category.category}
-              className="p-7 rounded-2xl bg-white/90 dark:bg-stone-900/60 border border-stone-200/90 dark:border-stone-800/80 hover:border-amber-500/40 dark:hover:border-amber-900/40 transition-all flex flex-col justify-between shadow-sm"
+              className="p-5 sm:p-6 rounded-2xl bg-white/90 dark:bg-stone-900/60 border border-stone-200/90 dark:border-stone-800/80 hover:border-amber-500/40 dark:hover:border-amber-900/40 transition-all flex flex-col justify-between shadow-sm"
             >
               <div>
                 {/* Category Header */}
